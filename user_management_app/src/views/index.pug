@@ -1,0 +1,20 @@
+doctype html
+html
+	head
+	body
+		h2 User Information App
+		each element in name
+			p=element.firstName+" "+element.lastName
+		H2 Form formulier
+
+			form(action='/' method='post')
+				| firstName:
+				br
+				input(type='text', name='firstname', value='firstname')
+				br
+				|   lastname:
+				br
+				input(type='text', name='lastname', value='lastname')
+				br
+				br
+				input(type='submit', value='Submit')
