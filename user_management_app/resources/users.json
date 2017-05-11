@@ -1,5 +1,4 @@
-{
-  "name": [    {
+[{
       "firstName": "Jo",
       "lastName": "Keizer"
     },
@@ -26,6 +25,4 @@
     {
       "firstName": "Laura",
       "lastName": "van Duiven"
-    }
-  ]
-}
+}]

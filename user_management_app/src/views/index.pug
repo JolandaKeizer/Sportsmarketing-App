@@ -3,18 +3,18 @@ html
 	head
 	body
 		h2 User Information App
-		each element in name
-			p=element.firstName+" "+element.lastName
+		each user in users
+			p #{user.firstName} #{user.lastName}
 		H2 Form formulier
 
 			form(action='/' method='post')
 				| firstName:
 				br
-				input(type='text', name='firstname', value='firstname')
+				input(type='text', name='firstName', value='firstname')
 				br
 				|   lastname:
 				br
-				input(type='text', name='lastname', value='lastname')
+				input(type='text', name='lastName', value='lastname')
 				br
 				br
 				input(type='submit', value='Submit')

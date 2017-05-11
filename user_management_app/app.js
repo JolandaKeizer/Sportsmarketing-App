@@ -6,33 +6,28 @@ const bodyParser = require('body-parser')
 app.use('/', bodyParser())
 
 
-// app.get('/', function(request, response){
-//   response.end("Hello World")
-// })
 app.set('views', 'src/views');
 app.set('view engine', 'pug');
 
-//     console.log(request.name[i].firstName)
-//       for (var i = 0; i < name[i].length; i++) {
-//       name[i]
-//       if (request.name.firstName == request.name[i].firstName || request.name.lastName == request.name[i].lastName) {
-//         respons.end("Successfully logged in")
-//       }
-//       else{
-//           response.send('name not found')
-//       }
-//     }
-//   }
-// }
 
-app.post ('/', function(request, response) {
+app.post ('/', function(request, response, next) {
     fs.readFile('./resources/users.json', function(err, data) {
         var parsedData = JSON.parse(data);
-        console.log('parsedData');
+        console.log("parsedData app.post('/')");
         console.log(parsedData);
+        console.log("request.body app.post('/')")
+        console.log(request.body)
+
+
+        for (var i = 0; i < parsedData.length; i++){
+            //am not allowed to sent multiple responses -- TO DO
+            if(parsedData[i].firstName === request.body.firstName || parsedData[i].lastName === request.body.lastName){
+                response.end("Name found")
+            }
+        } 
         response.render("form", 
         {
-            name: parsedData.name
+            users: parsedData
         })
     })    
 })
@@ -44,9 +39,10 @@ app.get('/', function(request, response) {
         }
 
         var parsedData = JSON.parse(data);
+        console.log("parsedData app.get('/')");
         console.log(parsedData);
         response.render("index", {
-            name: parsedData.name
+            users: parsedData
         });
     });
 });
