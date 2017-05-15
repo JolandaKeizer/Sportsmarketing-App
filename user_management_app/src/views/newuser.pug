@@ -1,20 +1,30 @@
 doctype html
-html
-	head
-	body
-		H2 Schrijf je nu in:
-
-			form(action='/' method='post')
-				| firstName:
-				br
-				input(type='text', name='firstName', value='firstname')
-				br
-				|   lastname:
-				br
-				input(type='text', name='lastName', value='lastname')
-				br
-				|   email:
-				br
-				input(type='text', name='email', value='email')
-				br
-				input(type='submit', value='Submit')
+html(lang="en")
+  head
+    title= "New User"
+    link(rel='stylesheet', href='../../main.css', type='text/css')
+  body
+    h2 <p style="color: red"> Add a user to our database
+    form(method='POST' action='/adduser')
+      p
+        | First name:
+        br
+        input(type='text', name='first', value='Name')
+        br
+        br
+        | Last name:
+        br
+        input(type='text', name='last', value='last Name')
+        br
+        br
+        | Email: 
+        br
+        input(type='text', name='email', value='email address')
+        br
+        br
+        | Username: 
+        br
+        input(type='text', name='username', value='username')
+        br
+        br
+        input(type='submit', value='Submit')

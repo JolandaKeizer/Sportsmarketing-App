@@ -1,0 +1,20 @@
+doctype html
+html(lang="en")
+	head
+		title= "Search user in json file"
+		link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css')
+		link(rel='stylesheet', href='../../main.css', type='text/css')
+
+	body
+		h2 <p style="color: orange">Find a user in our database
+		form(method='POST' action='/searchresults')
+			p
+			| First or last name: 
+			br
+			input(type='text', name='name', value='')
+			br
+			br
+			input(type='submit', value='Submit')
+			br
+			br
+		a.btn.btn-info(href='newuser', role='button') register here

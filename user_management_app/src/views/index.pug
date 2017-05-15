@@ -1,26 +1,16 @@
-
 doctype html
 html
 	head
+		link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css')
+		link(rel='stylesheet', href='../../main.css', type='text/css')
+
 	body
+		H2  <p style="color: orange">Welcome to the User Information App 
+		buffer!= buffer
+		br
+		br
+		a.btn.btn-info(href='search', role='button') search for user
+		a.btn.btn-info(href='newuser', role='button') register
 
-		H2  <p style="color: green">User Information App
-			//- each user in foundUsers
-			//- 	p=user.firstName
-			//- 	p=user.lastName
 
-			form(action='/' method='post')
-				br
-				| firstName:
-				br
-				input(type='text', name='firstName', value='firstname')
-				br
-				|   lastname:
-				br
-				input(type='text', name='lastName', value='lastname')
-				br
-				br
-				input(type='submit', value='Submit')
-				br
-				br
 
