@@ -11,7 +11,9 @@
   "author": "Ben Clinkinbeard <ben.clinkinbeard@gmail.com> (http://benclinkinbeard.com/)",
   "license": "ISC",
   "dependencies": {
+    "consolidate": "^0.14.5",
     "express": "^4.15.2",
+    "handlebars": "^4.0.8",
     "lodash": "^3.10.1",
     "pug": "^2.0.0-rc.1"
   },
