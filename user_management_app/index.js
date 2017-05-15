@@ -13,7 +13,7 @@ var app = express()
 app.set('views', 'src/views');
 app.set('view engine', 'pug');
 app.use(express.static('css'));
-app.use(express.static('images'));
+app.use('/profilepics', express.static('images'))
 app.use(bodyParser());
 
 // adding new user to json file
@@ -62,7 +62,7 @@ app.get('/search', (req, res) => { // handle search page request
 
 // route 3 searchresults of search function
 app.post('/searchresults', (req, res) => { // handle search post request
-    var query = req.body.name.split(' '); // split allow to search for first/last name 
+    var query = req.body.name.split(' '); 
     console.log("This is query:" + query)
     console.log("This is users:" + users )
     console.log("request receiveds")
@@ -70,7 +70,7 @@ app.post('/searchresults', (req, res) => { // handle search post request
     var nameResult = []; 
 
     query.forEach((findUser) => { // loop through every first/last name 
-        users.filter((person) => { // only returning user if user is found in JSON file
+        users.filter((person) => { 
             console.log("filtering")
             if ((person.name.first == findUser) || (person.name.last == findUser)) {
               console.log("User found!")
@@ -99,9 +99,9 @@ app.get('/newuser', (req, res) => { // handle new user form page
 // route 5 
 app.post('/adduser', (req, res) => { // handle add user post request
     let aUser = new addUser(req.body.first, req.body.last, req.body.email, req.body.username) // use addUser constructor with req params
-    users.push(aUser) // push new user to users array
+    users.push(aUser) 
 
-    fs.writeFile('users.json', JSON.stringify(users, null, 2), (err, data) => { // write users array to user.json as JSON string
+    fs.writeFile('users.json', JSON.stringify(users, null, 2), (err, data) => { 
         if (err) throw err;
         console.log('New user added to users.json')
     });
@@ -114,7 +114,7 @@ app.post('/adduser', (req, res) => { // handle add user post request
 // links from all users
 app.get('/:username', function (req, res) {
   var username = req.params.username
-  res.send(username)
+  res.render('user', {username: username})
 })
 
 var server = app.listen(3000, function () {
