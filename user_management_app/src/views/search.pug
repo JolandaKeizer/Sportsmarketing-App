@@ -11,10 +11,19 @@ html(lang="en")
 			p
 			| First or last name: 
 			br
-			input(type='text', name='name', value='')
+			input(type='text', name='name', value='', id="autocomplete")
 			br
 			br
 			input(type='submit', value='Submit')
 			br
 			br
 		a.btn.btn-info(href='newuser', role='button') register here
+
+
+
+			post('#autocomplete').autocomplete({
+			serviceUrl: '/autocomplete/countries',
+			onSelect: function (suggestion) {
+			alert('You selected: ' + suggestion.value + ', ' + suggestion.data);
+			}
+			});

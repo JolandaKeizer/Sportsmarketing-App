@@ -1,19 +1,17 @@
 {
-  "name": "egghead-getting-started-with-express",
+  "name": "user information app",
   "version": "1.0.0",
-  "description": "Egghead - Getting Started with Express",
+  "description": "find user in json file",
   "main": "index.js",
   "scripts": {
     "start": "node index.js",
     "dev": "nodemon index.js"
   },
   "keywords": [],
-  "author": "Ben Clinkinbeard <ben.clinkinbeard@gmail.com> (http://benclinkinbeard.com/)",
+  "author": "Jolanda Keizer",
   "license": "ISC",
   "dependencies": {
-    "consolidate": "^0.14.5",
     "express": "^4.15.2",
-    "handlebars": "^4.0.8",
     "lodash": "^3.10.1",
     "pug": "^2.0.0-rc.1"
   },
