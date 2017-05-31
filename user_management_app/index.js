@@ -1,18 +1,26 @@
+/**
+ * Require libraries/modules
+ */
 var pug = require('pug');
 var express = require('express')
 var fs = require('fs')
 var _ = require('lodash')
 var bodyParser = require('body-parser');
+var jquery = require('jquery');
 
+/**
+ * Define variables
+ */
 var users = []
-
 var app = express()
 
-
-
+/**
+ * Set configurations
+ */
 app.set('views', 'src/views');
 app.set('view engine', 'pug');
 app.use(express.static('css'));
+app.use(express.static('js'));
 app.use('/profilepics', express.static('images'))
 app.use(bodyParser());
 
@@ -22,7 +30,8 @@ const addUser = function(first, last, email, username) {
     this.name = {
         title: ' ',
         first: first,
-        last: last
+        last: last,
+        full: first + ' ' + last
     },
     this.email = email,
     this.username = username
@@ -53,18 +62,56 @@ app.get('/', function (req, res) {
 })
 
 
-// route 2 search page
+//route 2 search page
 app.get('/search', (req, res) => { // handle search page request
     res.render('search')
 });
 
-$.get('#autocomplete').autocomplete({
-    serviceUrl: '/autocomplete/countries',
-    onSelect: function (suggestion) {
-        alert('You selected: ' + suggestion.value + ', ' + suggestion.data);
-    }
+app.get('/searchresults', function(req, res) {
+   var regex = new RegExp(req.query["term"], 'i');
+   var query = User.find({fullname: regex}, { 'fullname': 1 }).sort({"updated_at":-1}).sort({"created_at":-1}).limit(20);
+        
+      // Execute query in a callback and return users list
+  query.exec(function(err, users) {
+      if (!err) {
+         // Method to construct the json result set
+         var result = buildResultSet(users); 
+         res.send(result, {
+            'Content-Type': 'users.json'
+         }, 200);
+      } else {
+         res.send(JSON.stringify(err), {
+            'Content-Type': 'user.json'
+         }, 404);
+      }
+   });
 });
 
+
+// route 3 searchresults of search function
+app.get('/searchautocomplete', (req, res) => { // handle search post request
+  // req.query["term"]
+    var regex = new RegExp(req.query["term"], 'i');
+
+    console.log("This is query:" + req.query["term"])
+    console.log("This is users:" + users )
+    console.log("request receiveds")
+    //empty array to find user
+    var nameResult = []; 
+
+    users.filter((person) => { // only returning user if user is found in JSON file
+        console.log("filtering")
+        if (person.name.first.match(regex) || person.name.last.match(regex)) {
+            console.log("User found!")
+            nameResult.push(person) //push found user 
+        }
+    });
+
+    console.log("Test: " + nameResult)       
+    res.send(nameResult, {
+      'Content-Type': 'users.json'
+    }, 200);
+});
 
 // route 3 searchresults of search function
 app.post('/searchresults', (req, res) => { // handle search post request
