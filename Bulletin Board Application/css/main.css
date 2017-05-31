@@ -1,0 +1,82 @@
+body {
+  padding-top: 50px;
+}
+.starter-template {
+  padding: 40px 15px;
+  text-align: center;
+}
+
+@media screen and (min-width: 768px) {
+.jumbotron h1 {
+    font-size: 30px !important;
+    color: #8e1212 !important;
+}
+
+a.btn.btn-primary.btn-lg {
+    float: right;
+    margin-top: -45px;
+}
+
+.navbar-inverse {
+    height: 75px;
+}
+
+.navbar-brand {
+    padding: 25px 15px !important;
+
+}
+
+
+.navbar-nav>li>a {
+    padding-top: 25px !important;
+    padding-bottom: 15px;
+}
+
+img {
+    vertical-align: middle;
+    width: 350px;
+    height: 350px;
+}
+
+.starter-template-2{
+    padding: 96px 15px;
+    text-align: left;
+    background-color: bisque;
+    border: dashed #626267;
+}
+
+/*body { 
+    display: block;
+    margin: 8px;
+    background-image: url("/background.png");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center; 
+    background-size: 100%;
+    margin: 30px;
+}
+
+body {
+  padding-top: 50px;
+}
+.starter-template {
+  padding: 40px 15px;
+  text-align: center;
+}
+
+
+table {
+	font-family: arial, sans-serif;
+	border-collapse: collapse;
+	width: 70%;
+}
+
+td, th {
+	border: 1px solid #dddddd;
+	text-align: center !important;
+	padding: 8px;
+}
+
+tr:nth-child(even) {
+	background-color: #dddddd;
+}*/
