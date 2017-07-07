@@ -1,0 +1,24 @@
+Database
+- Toernooi
+	- Naam
+	- Datum
+	- Plaats
+- Onderdeel
+	- Naam
+
+- Atleet
+	- Image
+	- Firstname
+	- Lastname
+	- Date of Birth
+	- Nationality
+	- Track & Field
+	- discipline
+	- PB
+
+- Uitslag
+	- Toernooi_id
+	- Onderdeel_id
+	- Atleet_id
+	- Uitslag
+	- Type (Tijd, afstand)

@@ -1,0 +1,253 @@
+body {
+    background: #030321 !important;
+    text-align: center;
+    color:#fff;
+    padding-top:1em;
+    padding-bottom: 1em;
+    font-family: Arial;
+}
+a.typewrite {
+    color:#FFF;
+    text-decoration: none;
+}
+
+
+svg {
+    display: block;
+    font: 10.5em 'Montserrat';
+    width: 960px;
+    height: 300px;
+    margin: 0 auto;
+}
+
+.text-copy {
+    fill: none;
+    stroke: white;
+    stroke-dasharray: 6% 29%;
+    stroke-width: 5px;
+    stroke-dashoffset: 0%;
+    animation: stroke-offset 5.5s infinite linear;
+}
+
+.text-copy:nth-child(1){
+    stroke: #FFFFFF;
+    animation-delay: -1;
+}
+
+.text-copy:nth-child(2){
+    stroke: #FFFFFF;
+    animation-delay: -2s;
+}
+
+.text-copy:nth-child(3){
+    stroke: #FFFFFF;
+    animation-delay: -3s;
+}
+
+.text-copy:nth-child(4){
+    stroke: #FFFFFF;
+    animation-delay: -4s;
+}
+
+.text-copy:nth-child(5){
+    stroke: #FDB731;
+    animation-delay: -5s;
+}
+
+@keyframes stroke-offset{
+    100% {stroke-dashoffset: -35%;}
+}
+
+
+
+/*=========================
+  Icons
+ ================= */
+
+/* footer social icons */
+ul.social-network {
+    list-style: none;
+    display: inline;
+    margin-left:0 !important;
+    padding: 0;
+}
+ul.social-network li {
+    display: inline;
+    margin: 0 5px;
+}
+
+
+/* footer social icons */
+.social-network a.icoRss:hover {
+    background-color: #F56505;
+}
+.social-network a.icoFacebook:hover {
+    background-color:#3B5998;
+}
+.social-network a.icoTwitter:hover {
+    background-color:#33ccff;
+}
+.social-network a.icoGoogle:hover {
+    background-color:#BD3518;
+}
+.social-network a.icoVimeo:hover {
+    background-color:#0590B8;
+}
+.social-network a.icoLinkedin:hover {
+    background-color:#007bb7;
+}
+.social-network a.icoRss:hover i, .social-network a.icoFacebook:hover i, .social-network a.icoTwitter:hover i,
+.social-network a.icoGoogle:hover i, .social-network a.icoVimeo:hover i, .social-network a.icoLinkedin:hover i {
+    color:#fff;
+}
+a.socialIcon:hover, .socialHoverClass {
+    color:#44BCDD;
+}
+
+.social-circle li a {
+    display:inline-block;
+    position:relative;
+    margin:0 auto 0 auto;
+    -moz-border-radius:50%;
+    -webkit-border-radius:50%;
+    border-radius:50%;
+    text-align:center;
+    width: 50px;
+    height: 50px;
+    font-size:20px;
+}
+.social-circle li i {
+    margin:0;
+    line-height:50px;
+    text-align: center;
+}
+
+.social-circle li a:hover i, .triggeredHover {
+    -moz-transform: rotate(360deg);
+    -webkit-transform: rotate(360deg);
+    -ms--transform: rotate(360deg);
+    transform: rotate(360deg);
+    -webkit-transition: all 0.2s;
+    -moz-transition: all 0.2s;
+    -o-transition: all 0.2s;
+    -ms-transition: all 0.2s;
+    transition: all 0.2s;
+}
+.social-circle i {
+    color: #fff;
+    -webkit-transition: all 0.8s;
+    -moz-transition: all 0.8s;
+    -o-transition: all 0.8s;
+    -ms-transition: all 0.8s;
+    transition: all 0.8s;
+}
+
+.social-network.social-circle a {
+    background-color: #D3D3D3;
+}
+
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+
+.post.style1 {
+    background-color: #fff;
+    color: #444;
+}
+
+.post .content {
+    -moz-transition: background 0.2s ease-in-out;
+    -webkit-transition: background 0.2s ease-in-out;
+    -ms-transition: background 0.2s ease-in-out;
+    transition: background 0.2s ease-in-out;
+    -moz-order: 1;
+    -webkit-order: 1;
+    -ms-order: 1;
+    order: 1;
+    width: 50%;
+    display: block;
+    background: #FFF;
+    padding: 8em;
+    float: right;
+    position: relative;
+}
+
+.post .image {
+    -moz-transition: background 0.2s ease-in-out;
+    -webkit-transition: background 0.2s ease-in-out;
+    -ms-transition: background 0.2s ease-in-out;
+    transition: background 0.2s ease-in-out;
+    -moz-order: 1;
+    -webkit-order: 1;
+    -ms-order: 1;
+    order: 1;
+    width: 50%;
+    display: block;
+    background: #FFF;
+    float: right;
+    position: relative;
+}
+
+
+h6.header {
+    margin-bottom: 0px;
+    text-align: right;
+}
+
+h1.header {
+     margin-top: 0px;
+     color: #840037;
+     text-align: right;
+ }
+
+p {
+
+    text-align: right;
+}
+
+
+h2 {
+    text-align: right;
+}
+
+h1.top{
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+table {
+    width: 100%;
+}
+
+th {
+    height: 50px;
+}
+
+td, th {
+    padding: 0;
+    text-align: left;
+}
+
+.btn-info {
+    color: #fff;
+    background-color: #4D163D !important;
+    border-color: #4D163D !important;
+    float: left;
+    margin-right: 20px;
+}
+
+.btn-athlete {
+    color: #fff;
+    background-color: #FDB731 !important;
+    border-color: #FDB731 !important;
+    float: left;
+    margin-right: 20px;
+}
+
+.btn-edit {
+    color: #fff;
+    background-color: #e8423e !important;
+    border-color: #e8423e !important;
+    float: left;
+    margin-right: 20px;
+}

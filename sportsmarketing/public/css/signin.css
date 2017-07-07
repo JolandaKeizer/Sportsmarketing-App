@@ -1,0 +1,157 @@
+body {
+  padding-top: 40px;
+  padding-bottom: 40px;
+  background-image: url("../img/background.png");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center; 
+  background-size: 100%;
+  color: #1e1918;
+}
+
+.form-signin {
+  max-width: 330px;
+  padding: 15px;
+  margin: 0 auto;
+}
+.form-signin .form-signin-heading,
+.form-signin .checkbox {
+  margin-bottom: 10px;
+}
+.form-signin .checkbox {
+  font-weight: normal;
+}
+.form-signin .form-control {
+  position: relative;
+  height: auto;
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 10px;
+  font-size: 16px;
+}
+.form-signin .form-control:focus {
+  z-index: 2;
+}
+.form-signin input[type="email"] {
+  margin-bottom: -1px;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+}
+.form-signin input[type="password"] {
+  margin-bottom: 10px;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
+
+.btn-primary {
+    color: #fff;
+    background-color: #1e1918 !important;
+    border-color: #1e1918 !important;
+}
+
+.form-control:focus {
+    border-color: #1e1918 !important;
+}
+
+ #footer {
+    position : relative;
+    bottom : 0;
+    height : 100px;
+    margin-top : 40px;
+  }
+
+  #footer-content {
+    float: right;
+  }
+
+body{
+    background: #030321;
+    font-family: Arial;
+}
+
+svg {
+    display: block;
+    font: 10.5em 'Montserrat';
+    width: 960px;
+    height: 300px;
+    margin: 0 auto;
+}
+
+.text-copy {
+    fill: none;
+    stroke: white;
+    stroke-dasharray: 6% 29%;
+    stroke-width: 5px;
+    stroke-dashoffset: 0%;
+    animation: stroke-offset 5.5s infinite linear;
+}
+
+.text-copy:nth-child(1){
+    stroke: #4D163D;
+    animation-delay: -1;
+}
+
+.text-copy:nth-child(2){
+    stroke: #840037;
+    animation-delay: -2s;
+}
+
+.text-copy:nth-child(3){
+    stroke: #BD0034;
+    animation-delay: -3s;
+}
+
+.text-copy:nth-child(4){
+    stroke: #BD0034;
+    animation-delay: -4s;
+}
+
+.text-copy:nth-child(5){
+    stroke: #FFF;
+    animation-delay: -5s;
+}
+
+@keyframes stroke-offset{
+    100% {stroke-dashoffset: -35%;}
+}
+
+h2 {
+    color: white !important;
+}
+
+.checkbox label, .radio label {
+    min-height: 20px;
+    padding-left: 20px;
+    margin-bottom: 0;
+    font-weight: 400;
+    cursor: pointer;
+    color: white;
+}
+
+.btn-primary {
+    color: #ff1c1c;
+    background-color: #ffffff !important;
+    border-color: #ffffff !important;
+}
+
+.btn-primary:hover {
+    color: #ff1c1c;
+
+}
+
+.text {
+    display: inline-block;
+}
+
+img {
+    width: 100px;
+    height: 100px;
+}
+
+.floating-box1 {
+    float: right;
+}
+img {
+    float: right;
+    margin: 26px 95px -108px 10px;}

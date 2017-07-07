@@ -1,0 +1,36 @@
+{
+  "name": "sportsmarketing",
+  "version": "1.0.0",
+  "description": "",
+  "main": "sportsmarketing.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "async": "^2.4.1",
+    "bcrypt": "^1.0.2",
+    "body-parser": "^1.17.2",
+    "chart.js": "^2.6.0",
+    "csv": "^1.1.1",
+    "csv-parse": "^1.2.0",
+    "dropzone": "^5.1.1",
+    "express": "^4.15.3",
+    "express-handlebars": "^3.0.0",
+    "express-session": "^1.15.3",
+    "fast-csv": "^2.4.0",
+    "fs": "0.0.1-security",
+    "image-size": "^0.6.0",
+    "multer": "^1.3.0",
+    "node-module": "^2.0.0",
+    "nodemon": "^1.11.0",
+    "pb": "^0.3.1",
+    "pg": "^6.4.0",
+    "pug": "^2.0.0-rc.2",
+    "request": "^2.81.0",
+    "sequelize": "^4.2.0",
+    "string.prototype.startswith": "^0.2.0"
+  }
+}

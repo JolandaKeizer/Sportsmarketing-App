@@ -1,0 +1,9 @@
+.container {
+  width: 50%;
+  margin: 15px auto;
+}
+
+#myChart {
+  width: 100px;
+  height: auto;
+}
